@@ -176,17 +176,6 @@ export const Hero = () => {
               <span>Консультация специалиста</span>
             </button>
           </div>
-          
-          {/* <div className={styles.scrollIndicator}>
-            <div className={styles.mouse}>
-              <div className={styles.wheel}></div>
-            </div>
-            <div className={styles.arrows}>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

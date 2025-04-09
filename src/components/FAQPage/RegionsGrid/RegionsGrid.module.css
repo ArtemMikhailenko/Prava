@@ -1,0 +1,141 @@
+/* RegionsGrid.module.css */
+.regionsWrapper {
+    margin-bottom: 30px;
+  }
+  
+  .searchContainer {
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .searchWrapper {
+    position: relative;
+  }
+  
+  .searchInput {
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border: 1px solid #e2e8f0;
+    border-radius: 30px;
+    font-size: 16px;
+    color: #334155;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .searchInput:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+  
+  .searchIcon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+  }
+  
+  .noResults {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+    background-color: #f8fafc;
+    border-radius: 12px;
+    border: 1px dashed #cbd5e1;
+  }
+  
+  .regionsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    width: 100%;
+  }
+  
+  .regionItem {
+    position: relative;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .regionItem::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: #2563eb;
+    transition: width 0.3s ease;
+  }
+  
+  .regionItem:hover::before {
+    width: 100%;
+  }
+  
+  .regionItem:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(37, 99, 235, 0.1);
+    background-color: white;
+  }
+  
+  .regionName {
+    font-size: 15px;
+    font-weight: 500;
+    color: #334155;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .fadeIn {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    .regionsContainer {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .regionsContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .regionItem {
+      padding: 10px 16px;
+    }
+    
+    .regionName {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .regionsContainer {
+      grid-template-columns: 1fr;
+    }
+  }

@@ -112,9 +112,9 @@ export const Header = () => {
               { id: 'spectehnika', label: 'Спецтехника' },
               { id: 'gims', label: 'ГИМС' },
               { id: 'uslugi', label: 'Услуги' },
-              { id: 'voprosy', label: 'Вопросы' },
-              { id: 'garantii', label: 'Гарантии' },
-              { id: 'oplata', label: 'Оплата и доставка' }
+              { id: 'faq', label: 'Вопросы' },
+              { id: 'guarantees', label: 'Гарантии' },
+              { id: 'payment', label: 'Оплата и доставка' }
             ].map(item => (
               <li 
                 key={item.id} 
