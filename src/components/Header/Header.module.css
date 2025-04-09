@@ -1,0 +1,389 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: all 0.3s ease;
+  }
+  
+  .scrolled {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .topBar {
+    background-color: #f1f5f9;
+    padding: 8px 0;
+    font-size: 14px;
+    color: #64748b;
+    transition: all 0.3s ease;
+  }
+  
+  .scrolled .topBar {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .topBarInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .topBarContact {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .contactItem {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .topBarSocial {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .socialLink {
+    color: #64748b;
+    transition: color 0.2s ease;
+  }
+  
+  .socialLink:hover {
+    color: #2563eb;
+  }
+  
+  .icon {
+    display: inline-flex;
+  }
+  
+  .mainHeader {
+    background-color: white;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .compact {
+    padding: 10px 0;
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoLink {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logoText {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    transition: font-size 0.3s ease;
+  }
+  
+  .compact .logoText {
+    font-size: 24px;
+  }
+  
+  .logoTextPrava {
+    color: #334155;
+  }
+  
+  .logoTextVod {
+    color: #2563eb;
+    position: relative;
+  }
+  
+  .logoTextVod::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #2563eb;
+    border-radius: 3px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  
+  .logoLink:hover .logoTextVod::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .slogan {
+    font-size: 14px;
+    color: #64748b;
+    margin-top: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .compact .slogan {
+    font-size: 12px;
+  }
+  
+  .contactInfo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .whatsappLink {
+    text-decoration: none;
+  }
+  
+  .whatsappContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(37, 211, 102, 0.1);
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+  
+  .whatsappContainer:hover {
+    background-color: rgba(37, 211, 102, 0.15);
+    border-color: rgba(37, 211, 102, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .whatsappIcon {
+    flex-shrink: 0;
+  }
+  
+  .whatsappContainer span {
+    color: #334155;
+    font-weight: 500;
+  }
+  
+  .callbackButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .callbackButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+  }
+  
+  .callbackButton:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+  }
+  
+  .callbackButton:hover::before {
+    left: 100%;
+  }
+  
+  .phoneIcon {
+    color: white;
+  }
+  
+  .mobileMenuButton {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .hamburgerLine {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px auto;
+    background-color: #334155;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .mobileMenuButton.active .hamburgerLine:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .mobileMenuButton.active .hamburgerLine:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobileMenuButton.active .hamburgerLine:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+  
+  .nav {
+    background-color: white;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+  }
+  
+  .navScrolled {
+    border-top-color: transparent;
+  }
+  
+  .navList {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+  }
+  
+  .navItem {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navItem a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    color: #334155;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    position: relative;
+  }
+  
+  .navItem:hover a {
+    color: #2563eb;
+  }
+  
+  .activeIndicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #2563eb;
+    border-radius: 3px 3px 0 0;
+  }
+  
+  .navItem.active a {
+    color: #2563eb;
+  }
+  
+  @media (max-width: 1024px) {
+    .topBarContact, .topBarSocial {
+      gap: 10px;
+    }
+    
+    .contactInfo {
+      gap: 10px;
+    }
+    
+    .whatsappContainer, .callbackButton {
+      padding: 8px 12px;
+    }
+    
+    .navItem a {
+      padding: 0 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .topBar {
+      display: none;
+    }
+    
+    .container {
+      padding: 0 15px;
+    }
+    
+    .logoText {
+      font-size: 24px;
+    }
+    
+    .contactInfo {
+      display: none;
+    }
+    
+    .mobileMenuButton {
+      display: block;
+    }
+    
+    .nav {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 70px);
+      background-color: white;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      border: none;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navOpen {
+      transform: translateX(0);
+    }
+    
+    .navList {
+      flex-direction: column;
+      height: auto;
+      padding: 20px 0;
+    }
+    
+    .navItem {
+      height: auto;
+    }
+    
+    .navItem a {
+      height: auto;
+      padding: 15px 20px;
+      width: 100%;
+    }
+    
+    .activeIndicator {
+      width: 3px;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border-radius: 0 3px 3px 0;
+    }
+  }

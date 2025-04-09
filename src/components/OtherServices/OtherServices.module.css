@@ -1,0 +1,389 @@
+/* components/OtherServices/OtherServices.module.css */
+.section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    overflow: hidden;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1e293b;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  
+  .title::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  .tableWrapper {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+  
+  .tableHeader {
+    display: flex;
+    background-color: #f8fafc;
+    padding: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    font-weight: 600;
+    color: #64748b;
+  }
+  
+  .tableCol1 {
+    width: 8%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .tableCol2 {
+    width: 42%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .tableCol3 {
+    width: 25%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .tableCol4 {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .tableBody {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .serviceRowContainer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .serviceRow {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    background-color: white;
+  }
+  
+  .serviceRow:hover {
+    background-color: #f8fafc;
+  }
+  
+  .expanded {
+    background-color: #f0f9ff !important;
+    border-bottom: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    z-index: 2;
+  }
+  
+  .fadeIn {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .serviceNumber {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #334155;
+    transition: all 0.3s ease;
+  }
+  
+  .expanded .serviceNumber {
+    background-color: #2563eb;
+    color: white;
+  }
+  
+  .serviceTitleContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .serviceIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    transition: all 0.3s ease;
+  }
+  
+  .expanded .serviceIcon {
+    background-color: #2563eb;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  .serviceTitle {
+    font-weight: 600;
+    font-size: 16px;
+    color: #1e293b;
+    transition: color 0.3s ease;
+  }
+  
+  .expanded .serviceTitle {
+    color: #2563eb;
+  }
+  
+  .servicePrice {
+    font-weight: 700;
+    color: #2563eb;
+    font-size: 18px;
+  }
+  
+  .detailsButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f1f5f9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #334155;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .expanded .detailsButton {
+    background-color: #2563eb;
+    color: white;
+  }
+  
+  .arrowIcon {
+    transition: transform 0.3s ease;
+  }
+  
+  .expanded .arrowIcon {
+    transform: rotate(90deg);
+    color: white;
+  }
+  
+  /* Expanded info section */
+  .expandedInfo {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    background-color: #f0f9ff;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .showInfo {
+    height: auto;
+    min-height: 140px;
+  }
+  
+  .expandedContent {
+    padding: 0 20px 20px 80px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition-delay: 0.1s;
+  }
+  
+  .showInfo .expandedContent {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .serviceDescription {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #475569;
+    margin-bottom: 20px;
+  }
+  
+  .serviceActions {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .primaryButton {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  }
+  
+  .primaryButton:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+  }
+  
+  .secondaryButton {
+    background-color: transparent;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .secondaryButton:hover {
+    background-color: rgba(37, 99, 235, 0.05);
+    transform: translateY(-2px);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .title {
+      font-size: 32px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .section {
+      padding: 60px 0;
+    }
+    
+    .tableHeader {
+      display: none;
+    }
+    
+    .serviceRow {
+      flex-wrap: wrap;
+      padding: 15px;
+    }
+    
+    .tableCol1 {
+      width: 15%;
+    }
+    
+    .tableCol2 {
+      width: 85%;
+    }
+    
+    .tableCol3 {
+      width: 50%;
+      margin-top: 15px;
+      margin-left: 15%;
+    }
+    
+    .tableCol4 {
+      width: 35%;
+      justify-content: flex-start;
+      margin-top: 15px;
+    }
+    
+    .expandedContent {
+      padding: 0 15px 15px 15px;
+    }
+    
+    .serviceActions {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 28px;
+    }
+    
+    .serviceRow {
+      padding: 12px;
+    }
+    
+    .tableCol1 {
+      width: 20%;
+    }
+    
+    .tableCol2 {
+      width: 80%;
+    }
+    
+    .tableCol3 {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 12px;
+    }
+    
+    .tableCol4 {
+      width: 100%;
+      margin-top: 12px;
+    }
+    
+    .serviceTitleContainer {
+      gap: 10px;
+    }
+    
+    .serviceIcon {
+      width: 32px;
+      height: 32px;
+    }
+    
+    .serviceTitle {
+      font-size: 14px;
+    }
+    
+    .servicePrice {
+      font-size: 16px;
+    }
+    
+    .detailsButton {
+      width: 100%;
+      justify-content: center;
+    }
+  }
