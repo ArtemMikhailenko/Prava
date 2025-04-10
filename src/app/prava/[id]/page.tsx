@@ -4,13 +4,16 @@ import type { Metadata } from 'next'
 import { CategoryTemplate } from '@/components/CategoryTemplate/CategoryTemplate'
 import { getCategoryData } from '@/data/categories'
 
-// Page component with explicit types
-export default function CategoryPage({ 
-  params 
-}: { 
-  params: { id: string } 
-}) {
-  const categoryData = getCategoryData(params.id)
+// Custom interface that matches the error message requirements
+interface PageProps {
+  params: Promise<{ id: string }>
+}
+
+// Page component
+export default async function CategoryPage({ params }: PageProps) {
+  // Resolve the params promise
+  const resolvedParams = await params;
+  const categoryData = getCategoryData(resolvedParams.id)
 
   if (!categoryData) {
     notFound()
@@ -19,13 +22,11 @@ export default function CategoryPage({
   return <CategoryTemplate data={categoryData} />
 }
 
-// Metadata function with explicit types
-export async function generateMetadata({ 
-  params 
-}: { 
-  params: { id: string } 
-}): Promise<Metadata> {
-  const categoryData = getCategoryData(params.id)
+// Metadata function - also needs to handle promise params
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  // Resolve the params promise
+  const resolvedParams = await params;
+  const categoryData = getCategoryData(resolvedParams.id)
 
   if (!categoryData) {
     return {
