@@ -4,7 +4,7 @@ import { CategoryTemplate } from '@/components/CategoryTemplate/CategoryTemplate
 import { getCategoryData } from '@/data/categories';
 
 // Генерация метаданных для страницы
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { id: any } }): Promise<Metadata> {
   const categoryData = getCategoryData(params.id);
   
   if (!categoryData) {
