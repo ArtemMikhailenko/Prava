@@ -1,0 +1,617 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 180px; /* для учета фиксированного хедера */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Хедер страницы */
+  .pageHeader {
+    background-color: #f8fafc;
+    padding: 60px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .headerContent {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .headerInfo {
+    flex: 1;
+  }
+  
+  .pageTitle {
+    font-size: 40px;
+    font-weight: 800;
+    color: #1e293b;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+  }
+  
+  .pageSubtitle {
+    font-size: 18px;
+    color: #64748b;
+    margin: 0 0 30px 0;
+  }
+  
+  .headerFeatures {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .featureItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .featureIcon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f5f9;
+    border-radius: 10px;
+    color: #2563eb;
+  }
+  
+  .featureText {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .featureText span {
+    font-size: 14px;
+    color: #64748b;
+  }
+  
+  .featureText strong {
+    font-size: 18px;
+    font-weight: 700;
+    color: #334155;
+  }
+  
+  .headerButtons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .primaryButton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+  }
+  
+  .primaryButton:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+  }
+  
+  .secondaryButton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(37, 211, 102, 0.1);
+    color: #334155;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .secondaryButton:hover {
+    background-color: rgba(37, 211, 102, 0.15);
+    transform: translateY(-3px);
+  }
+  
+  .whatsappButtonIcon {
+    flex-shrink: 0;
+  }
+  
+  .headerImageContainer {
+    flex-shrink: 0;
+    width: 450px;
+  }
+  
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .headerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .imageWrapper:hover .headerImage {
+    transform: scale(1.05);
+  }
+  
+  .imageBadge {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.4;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+  }
+  
+  .imageBadge span {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  /* Навигация по контенту */
+  .contentNav {
+    background-color: white;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 130px;
+    z-index: 10;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 20px;
+    padding: 15px 0;
+  }
+  
+  .tabButton {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #64748b;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .tabButton:hover {
+    color: #2563eb;
+  }
+  
+  .activeTab {
+    color: #2563eb;
+  }
+  
+  .activeTab::after {
+    content: '';
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #2563eb;
+    border-radius: 3px 3px 0 0;
+  }
+  
+  /* Секция контента */
+  .contentSection {
+    padding: 60px 0;
+  }
+  
+  /* Стили для вкладки инфо */
+  .infoContent {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  
+  .sectionTitle {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+    border-radius: 3px;
+  }
+  
+  .descriptionText {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #475569;
+  }
+  
+  .descriptionText p {
+    margin-bottom: 20px;
+  }
+  
+  .benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+  }
+  
+  .benefitCard {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .fadeIn {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .benefitCard:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.1);
+  }
+  
+  .benefitIcon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f5f9;
+    border-radius: 12px;
+    color: #2563eb;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .benefitCard:hover .benefitIcon {
+    background-color: #2563eb;
+    color: white;
+  }
+  
+  .benefitTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 12px;
+  }
+  
+  .benefitDescription {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #64748b;
+  }
+  
+  .ctaSection {
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    padding: 30px;
+    border-radius: 16px;
+  }
+  
+  .ctaCard {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .ctaTitle {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 16px;
+  }
+  
+  .ctaText {
+    font-size: 16px;
+    color: #64748b;
+    margin-bottom: 25px;
+  }
+  
+  .ctaButton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+    margin: 0 auto;
+  }
+  
+  .ctaButton:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+  }
+  
+  /* Стили для вкладки процесса */
+  .processContent {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .processSteps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .processStep {
+    display: flex;
+    gap: 25px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .stepNumber {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  
+  .stepContent {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    flex: 1;
+  }
+  
+  .stepTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 10px;
+  }
+  
+  .stepDescription {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #64748b;
+  }
+  
+  .stepConnector {
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    height: calc(100% - 40px);
+    color: #cbd5e1;
+  }
+  
+  .processNote {
+    background-color: #f1f5f9;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #475569;
+  }
+  
+  /* Стили для вкладки FAQ */
+  .faqContent {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .faqList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .faqItem {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .faqQuestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+  }
+  
+  .faqQuestion h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+  }
+  
+  .faqToggle {
+    transition: transform 0.3s ease;
+  }
+  
+  .expanded .faqToggle {
+    transform: rotate(180deg);
+  }
+  
+  .faqAnswer {
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .expanded .faqAnswer {
+    padding: 0 25px 20px;
+    max-height: 1000px;
+  }
+  
+  .faqAnswer p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #64748b;
+    margin: 0;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Адаптивные стили */
+  @media (max-width: 1024px) {
+    .headerContent {
+      gap: 40px;
+    }
+    
+    .headerImageContainer {
+      width: 400px;
+    }
+    
+    .imageWrapper {
+      height: 280px;
+    }
+    
+    .benefitsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .pageContainer {
+      margin-top: 70px;
+    }
+    
+    .pageHeader {
+      padding: 40px 0;
+    }
+    
+    .headerContent {
+      flex-direction: column-reverse;
+    }
+    
+    .headerImageContainer {
+      width: 100%;
+    }
+    
+    .imageWrapper {
+      height: 250px;
+    }
+    
+    .pageTitle {
+      font-size: 32px;
+    }
+    
+    .pageSubtitle {
+      font-size: 16px;
+    }
+    
+    .headerButtons {
+      flex-direction: column;
+    }
+    
+    .contentNav {
+      top: 70px;
+    }
+    
+    .tabs {
+      overflow-x: auto;
+      padding: 15px 0;
+    }
+    
+    .benefitsGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .contentSection {
+      padding: 40px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .headerFeatures {
+      flex-direction: column;
+    }
+    
+    .tabButton {
+      font-size: 14px;
+    }
+    
+    .sectionTitle {
+      font-size: 24px;
+    }
+    
+    .ctaTitle {
+      font-size: 22px;
+    }
+  }
