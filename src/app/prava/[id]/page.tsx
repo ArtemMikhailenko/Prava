@@ -1,32 +1,36 @@
-import { notFound } from 'next/navigation';
-import type { Metadata } from 'next';
-import { CategoryTemplate } from '@/components/CategoryTemplate/CategoryTemplate';
-import { getCategoryData } from '@/data/categories';
+// app/prava/[id]/page.tsx
+import { notFound } from 'next/navigation'
+import type { Metadata, ResolvingMetadata } from 'next'
+import { CategoryTemplate } from '@/components/CategoryTemplate/CategoryTemplate'
+import { getCategoryData } from '@/data/categories'
 
-// Генерация метаданных для страницы
-export async function generateMetadata({ params }: { params: { id: any } }): Promise<Metadata> {
-  const categoryData = getCategoryData(params.id);
-  
+// 1. Синхронный generateMetadata, возвращает Metadata (может быть async, но типы проще соблюдать синхронно)
+export function generateMetadata(
+  { params }: { params: { id: string } },
+  parent: ResolvingMetadata
+): Metadata {
+  const categoryData = getCategoryData(params.id)
+
   if (!categoryData) {
     return {
       title: 'Категория не найдена',
-      description: 'Запрашиваемая категория водительских прав не найдена'
-    };
+      description: 'Запрашиваемая категория водительских прав не найдена',
+    }
   }
-  
+
   return {
     title: categoryData.title,
-    description: categoryData.subtitle
-  };
+    description: categoryData.subtitle,
+  }
 }
 
-export default function CategoryPage({ params }: { params: { id: any } }) {
-  const categoryData = getCategoryData(params.id);
-  
-  // Если категория не найдена, отдаем 404
+// 2. Компонент страницы с правильной типизацией params.id как string
+export default function CategoryPage({ params }: { params: { id: string } }) {
+  const categoryData = getCategoryData(params.id)
+
   if (!categoryData) {
-    notFound();
+    notFound()
   }
-  
-  return <CategoryTemplate data={categoryData} />;
+
+  return <CategoryTemplate data={categoryData} />
 }
