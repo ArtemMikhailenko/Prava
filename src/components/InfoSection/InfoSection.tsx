@@ -197,7 +197,7 @@ export const InfoSection = () => {
         <div className={styles.imageContainer}>
           <div className={styles.imageWrapper}>
             <Image
-              src="/images/hero-2.png"
+              src="/images/prava.jpeg"
               alt="Водительское удостоверение"
               width={500}
               height={350}

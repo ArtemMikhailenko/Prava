@@ -61,25 +61,25 @@ export default function FAQPage () {
       number: '01',
       title: 'Оставляете заявку',
       description: 'Мы предлагаем два удобных варианта: вы можете оставить заявку на нашем сайте или связаться с нами по телефону 8-800-777-06-53',
-      image: '/images/hero-2.png',
+      image: '/images/zayavka.jpg',
     },
     {
       number: '02',
       title: 'Оформляем ваши права',
       description: 'Без предоплаты. Быстро и официально оформим документы, и внесём информацию в базы ГИБДД.',
-      image: '/images/hero-2.png',
+      image: '/images/oformlenee.jpg',
     },
     {
       number: '03',
       title: 'Доставка ваших прав',
       description: 'Мы отправляем ваши права на проверку по email, а оригиналы доставляем туда, где и когда вам удобно.',
-      image: '/images/hero-2.png',
+      image: '/images/dostavka.jpg',
     },
     {
       number: '04',
       title: 'Оплата документов',
       description: 'Вы проверяете документы и оплачиваете удобным для вас способом. Мы делаем всё для вашего комфорта.',
-      image: '/images/hero-2.png',
+      image: '/images/oplata.jpg',
     },
   ];
 

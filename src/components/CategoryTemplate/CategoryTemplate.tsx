@@ -178,7 +178,7 @@ export const CategoryTemplate = ({
                 />
                 <div className={styles.imageBadge}>
                   Категория<br/>
-                  <span>{data.id.toUpperCase()}</span>
+                  <span>{data.title.toUpperCase()}</span>
                 </div>
               </div>
             </div>

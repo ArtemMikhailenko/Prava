@@ -11,7 +11,7 @@ const categoryData = [
     title: 'Права категории A',
     description: 'Мотоциклы и мототранспортные средства',
     icon: 'motorcycle',
-    image: '/images/hero-2.png',
+    image: '/images/a1.webp',
     benefits: ['Быстрое оформление', 'Официальная регистрация', 'Внесение в базу ГИБДД'],
     price: 'от 20 000 ₽',
   },
@@ -20,7 +20,7 @@ const categoryData = [
     title: 'Права категории B',
     description: 'Легковые автомобили и малотоннажные грузовики',
     icon: 'car',
-    image: '/images/hero-2.png',
+    image: '/images/b1.jpeg',
     benefits: ['Доставка по всей России', 'Оплата при получении', 'Проверка через сервисы ГИБДД'],
     price: 'от 22 000 ₽',
   },
@@ -29,7 +29,7 @@ const categoryData = [
     title: 'Права категории C',
     description: 'Грузовые автомобили свыше 3.5 тонн',
     icon: 'truck',
-    image: '/images/hero-2.png',
+    image: '/images/c1.webp',
     benefits: ['Все необходимые допуски', 'Возможность трудоустройства', 'Быстрое изготовление'],
     price: 'от 25 000 ₽',
   },
@@ -38,7 +38,7 @@ const categoryData = [
     title: 'Права категории D',
     description: 'Автобусы для перевозки пассажиров',
     icon: 'bus',
-    image: '/images/hero-2.png',
+    image: '/images/d1.png',
     benefits: ['Комплект необходимых документов', 'Индивидуальный подход', 'Юридическая поддержка'],
     price: 'от 27 000 ₽',
   },
@@ -47,7 +47,7 @@ const categoryData = [
     title: 'Права категории E',
     description: 'Транспортные средства с прицепом',
     icon: 'truck-trailer',
-    image: '/images/hero-2.png',
+    image: '/images/e1.webp',
     benefits: ['Для профессиональных водителей', 'Полностью легальный документ', 'Занесение в реестр'],
     price: 'от 26 000 ₽',
   },
@@ -56,7 +56,7 @@ const categoryData = [
     title: 'Права категории M',
     description: 'Мопеды и легкие квадрициклы',
     icon: 'scooter',
-    image: '/images/hero-2.png',
+    image: '/images/m1.webp',
     benefits: ['Ускоренная процедура', 'Гарантия подлинности', 'Помощь в оформлении'],
     price: 'от 18 000 ₽',
   },
@@ -158,7 +158,7 @@ export const Categories = () => {
                 <div className={styles.tabIcon}>
                   <CategoryIcon type={category.icon} />
                 </div>
-                <span>Категория {category.id.toUpperCase()}</span>
+                <span>Категория {category.title.toUpperCase()}</span>
               </div>
             </button>
           ))}
@@ -185,7 +185,7 @@ export const Categories = () => {
                   />
                   <div className={styles.cardCategory}>
                     <span className={styles.categoryLabel}>Категория</span>
-                    <span className={styles.categoryName}>{category.id.toUpperCase()}</span>
+                    <span className={styles.categoryName}>{category.title.toUpperCase()}</span>
                   </div>
                 </div>
                 

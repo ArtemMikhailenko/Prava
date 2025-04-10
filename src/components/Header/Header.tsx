@@ -65,8 +65,7 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState('');
-  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
-  const submenuRefs = useRef<{ [key: string]: HTMLLIElement | null }>({});
+  const [hoveredSubmenu, setHoveredSubmenu] = useState<string | null>(null);
   const mainHeaderRef = useRef<HTMLDivElement>(null);
   const [animationClass, setAnimationClass] = useState('');
 
@@ -100,34 +99,10 @@ export const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [scrolled]);
 
-  // Close submenu when clicking outside
+  // Close mobile menu when navigating
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      const isSubmenuClicked = Object.values(submenuRefs.current).some(
-        ref => ref && ref.contains(event.target as Node)
-      );
-
-      if (!isSubmenuClicked) {
-        setOpenSubmenu(null);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
-  // Close submenu and mobile menu when navigating
-  useEffect(() => {
-    setOpenSubmenu(null);
     setIsMenuOpen(false);
   }, [pathname]);
-
-  // Submenu toggle logic
-  const toggleSubmenu = (id: string) => {
-    setOpenSubmenu(prev => prev === id ? null : id);
-  };
 
   // Logo hover effects
   const handleLogoHover = () => {
@@ -181,9 +156,6 @@ export const Header = () => {
           <div className={styles.contactInfo}>
             <Link href="https://wa.me/your-number" className={styles.whatsappLink}>
               <div className={styles.whatsappContainer}>
-                <svg className={styles.whatsappIcon} viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19.05 4.91C18.1 4.2 16.93.85H8.73C7.05 3.85 5.82 4.22 4.87 4.95C3.93 5.7 3.45 6.76 3.45 8.14V15.86C3.45 17.23 3.93 18.31 4.87 19.05C5.82 19.78 7.05 20.15 8.73 20.15H15.28C16.93 20.15 18.15 19.78 19.04 19.05C19.96 18.31 20.42 17.23 20.42 15.86V8.14C20.45 6.79 19.98 5.71 19.05 4.91ZM12 15.52C10.07 15.52 8.5 13.94 8.5 12C8.5 10.06 10.07 8.48 12 8.48C13.93 8.48 15.5 10.06 15.5 12C15.5 13.94 13.93 15.52 12 15.52Z" fill="#25D366"/>
-                </svg>
                 <span>Пишите нам в WhatsApp</span>
               </div>
             </Link>
@@ -215,22 +187,12 @@ export const Header = () => {
               <li 
                 key={item.id} 
                 className={`${styles.navItem} ${activeNavItem === item.id ? styles.active : ''} ${item.hasSubmenu ? styles.hasSubmenu : ''}`}
-                onMouseEnter={() => item.hasSubmenu && toggleSubmenu(item.id)}
-                onMouseLeave={() => item.hasSubmenu && toggleSubmenu(item.id)}
-                ref={el => {
-                  if (item.hasSubmenu) {
-                    submenuRefs.current[item.id] = el;
-                  }
-                }}
+                onMouseEnter={() => item.hasSubmenu && setHoveredSubmenu(item.id)}
+                onMouseLeave={() => item.hasSubmenu && setHoveredSubmenu(null)}
               >
                 <Link 
                   href={item.path} 
                   className={activeNavItem === item.id ? styles.activeLink : ''}
-                  onClick={() => {
-                    if (item.hasSubmenu) {
-                      setOpenSubmenu(prev => prev === item.id ? null : item.id);
-                    }
-                  }}
                 >
                   {item.label}
                   {item.hasSubmenu && (
@@ -243,7 +205,7 @@ export const Header = () => {
                 
                 {/* Dropdown Submenu */}
                 {item.hasSubmenu && (
-                  <div className={`${styles.submenu} ${openSubmenu === item.id ? styles.submenuOpen : ''}`}>
+                  <div className={`${styles.submenu} ${hoveredSubmenu === item.id ? styles.submenuOpen : ''}`}>
                     <div className={styles.submenuContent}>
                       {menuData[item.id as keyof typeof menuData]?.map((subItem) => (
                         <Link 
@@ -251,7 +213,7 @@ export const Header = () => {
                           href={subItem.path} 
                           className={styles.submenuItem}
                           onClick={() => {
-                            setOpenSubmenu(null);
+                            setHoveredSubmenu(null);
                             setIsMenuOpen(false);
                           }}
                         >
@@ -264,21 +226,7 @@ export const Header = () => {
                         </Link>
                       ))}
                     </div>
-                    <div className={styles.submenuFooter}>
-                      <Link 
-                        href={item.path} 
-                        className={styles.submenuViewAll}
-                        onClick={() => {
-                          setOpenSubmenu(null);
-                          setIsMenuOpen(false);
-                        }}
-                      >
-                        <span>Смотреть все {item.label.toLowerCase()}</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="currentColor"/>
-                        </svg>
-                      </Link>
-                    </div>
+                    
                   </div>
                 )}
               </li>

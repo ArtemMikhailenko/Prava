@@ -1,15 +1,16 @@
-// app/prava/[id]/page.tsx
+// src/app/prava/[id]/page.tsx
 import { notFound } from 'next/navigation'
 import type { Metadata, ResolvingMetadata } from 'next'
 import { CategoryTemplate } from '@/components/CategoryTemplate/CategoryTemplate'
 import { getCategoryData } from '@/data/categories'
+import { JSX } from 'react'
 
-// 1. Синхронный generateMetadata, возвращает Metadata (может быть async, но типы проще соблюдать синхронно)
+// Синхронный метаданные (можно оставить sync)
 export function generateMetadata(
   { params }: { params: { id: string } },
   parent: ResolvingMetadata
 ): Metadata {
-  const categoryData = getCategoryData(params.id)
+  const categoryData = getCategoryData(params?.id)
 
   if (!categoryData) {
     return {
@@ -24,9 +25,13 @@ export function generateMetadata(
   }
 }
 
-// 2. Компонент страницы с правильной типизацией params.id как string
-export default function CategoryPage({ params }: { params: { id: string } }) {
-  const categoryData = getCategoryData(params.id)
+// Сделаем страницу async
+export default async function CategoryPage({
+  params,
+}: {
+  params: { id: string }
+}): Promise<JSX.Element> {
+  const categoryData = getCategoryData(params?.id)
 
   if (!categoryData) {
     notFound()

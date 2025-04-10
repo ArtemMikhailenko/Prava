@@ -172,9 +172,9 @@ export const InfoBlock = () => {
           </div>
           <div className={styles.heroImage}>
             <div className={styles.imageContainer}>
-              <div className={styles.imagePlaceholder}>
-                <span>Изображение водительских прав</span>
-              </div>
+              {/* <div className={styles.imagePlaceholder}> */}
+                <img src="/images/prava.jpeg" alt="" />
+              {/* </div> */}
             </div>
             <div className={styles.imageBadge}>
               <div className={styles.badgeIcon}>

@@ -128,10 +128,15 @@
     height: 280px;
     border-radius: 24px;
     overflow: hidden;
+    object-fit: cover;
     box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
     background-color: #f1f5f9;
   }
-  
+  .imageContainer img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
   .imagePlaceholder {
     display: flex;
     align-items: center;

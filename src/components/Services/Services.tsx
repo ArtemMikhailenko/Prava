@@ -10,7 +10,7 @@ const servicesData = [
     id: 'gibdd',
     title: 'Получение прав в ГИБДД',
     description: 'Оформление водительских удостоверений с регистрацией в базе ГИБДД',
-    image: '/images/hero-2.png',
+    image: '/images/gibdd.png',
     icon: 'car-license',
     benefits: [
       'Официальная регистрация в базе',
@@ -23,7 +23,7 @@ const servicesData = [
     id: 'spectehnika',
     title: 'Права на спецтехнику',
     description: 'Удостоверения для управления специальной техникой и транспортом',
-    image: '/images/hero-2.png',
+    image: '/images/spec.jpg',
     icon: 'construction',
     benefits: [
       'Тракторы и самоходные машины',
@@ -36,7 +36,7 @@ const servicesData = [
     id: 'gims',
     title: 'Получение прав в ГИМС',
     description: 'Оформление удостоверений для управления маломерными судами',
-    image: '/images/hero-2.png',
+    image: '/images/gims.jpg',
     icon: 'boat',
     benefits: [
       'Катера и моторные лодки',

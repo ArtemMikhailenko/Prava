@@ -16,7 +16,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем быстрое и официальное оформление прав на управление катком с внесением в реестр Гостехнадзора. Наши документы проходят любые проверки!</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/spec.jpg',
       price: 'от 20 000 ₽',
       benefits: [
         {
@@ -96,7 +96,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем быстрое и официальное оформление прав на управление моторной лодкой с внесением в реестр ГИМС. Наши документы проходят любые проверки и действительны для использования на всех внутренних водных путях РФ!</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/gims.jpg',
       price: 'от 18 000 ₽',
       benefits: [
         {
@@ -176,7 +176,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем быстрое и официальное оформление прав тракториста-машиниста любой категории с внесением в реестр Гостехнадзора. Наши документы проходят любые проверки!</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/spec.jpg',
       price: 'от 22 000 ₽',
       benefits: [
         {
@@ -256,7 +256,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем быстрое и официальное оформление прав на управление погрузчиком с внесением в реестр Гостехнадзора. Наши документы проходят любые проверки!</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/spec.jpg',
       price: 'от 21 000 ₽',
       benefits: [
         {
@@ -336,7 +336,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем быстрое и официальное оформление всех необходимых документов для работы на эвакуаторе с внесением в соответствующие базы данных. Наши документы проходят любые проверки и действительны для использования на всех внутренних водных путях РФ!</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/spec.jpg',
       price: 'от 25 000 ₽',
       benefits: [
         {
@@ -416,7 +416,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем быстрое и официальное оформление прав на управление бульдозером с внесением в реестр Гостехнадзора. Наши документы проходят любые проверки!</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/spec.jpg',
       price: 'от 23 000 ₽',
       benefits: [
         {
@@ -496,7 +496,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем быстрое и официальное оформление прав на управление комбайном с внесением в реестр Гостехнадзора. Наши документы проходят любые проверки!</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/spec.jpg',
       price: 'от 22 000 ₽',
       benefits: [
         {
@@ -578,7 +578,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем быстрое и официальное оформление прав на управление яхтой с внесением в реестр ГИМС. Наши документы проходят любые проверки и действительны для использования на всех внутренних водных путях РФ!</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/yahta.jpeg',
       price: 'от 20 000 ₽',
       benefits: [
         {
@@ -658,7 +658,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем быстрое и официальное оформление прав на управление катером с внесением в реестр ГИМС. Наши документы проходят любые проверки и действительны для использования на всех внутренних водных путях РФ!</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/gims.jpg',
       price: 'от 20 000 ₽',
       benefits: [
         {
@@ -738,7 +738,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем быстрое и официальное оформление прав на управление лодкой с внесением в реестр ГИМС. Наши документы проходят любые проверки и действительны для использования на всех внутренних водных путях РФ!</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/gims.jpg',
       price: 'от 18 000 ₽',
       benefits: [
         {
@@ -818,7 +818,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем быстрое и официальное оформление прав на управление парусным судном с внесением в реестр ГИМС. Наши документы проходят любые проверки и действительны для использования на всех внутренних водных путях РФ!</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/parus.jpg',
       price: 'от 20 000 ₽',
       benefits: [
         {
@@ -898,7 +898,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем быстрое и официальное оформление прав на управление аквабайком с внесением в реестр ГИМС. Наши документы проходят любые проверки и действительны для использования на всех внутренних водных путях РФ!</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/akvabike.avif',
       price: 'от 19 000 ₽',
       benefits: [
         {
@@ -978,7 +978,7 @@ export const categoriesData = {
           </ul>
           <p>Мы гарантируем быстрое и официальное оформление дубликата с внесением в базу ГИБДД!</p>
         `,
-        imagePath: '/images/hero-2.png',
+        imagePath: '/images/prava.jpeg',
         price: 'от 15 000 ₽',
         benefits: [
           {
@@ -1060,7 +1060,7 @@ export const categoriesData = {
           </ul>
           <p>Мы поможем вам вернуть права максимально быстро и легально!</p>
         `,
-        imagePath: '/images/hero-2.png',
+        imagePath: '/images/prava.jpeg',
         price: 'от 30 000 ₽',
         benefits: [
           {
@@ -1142,7 +1142,7 @@ export const categoriesData = {
           </ul>
           <p>Получите медицинскую справку быстро, легко и без лишних хлопот!</p>
         `,
-        imagePath: '/images/hero-2.png',
+        imagePath: '/images/spravka.jpg',
         price: 'от 2 500 ₽',
         benefits: [
           {
@@ -1224,7 +1224,7 @@ export const categoriesData = {
           </ul>
           <p>Получите российские права быстро и легально!</p>
         `,
-        imagePath: '/images/hero-2.png',
+        imagePath: '/images/prava.jpeg',
         price: 'от 25 000 ₽',
         benefits: [
           {
@@ -1310,7 +1310,7 @@ export const categoriesData = {
           </ul>
           <p>Получите права быстро, легально и без лишних хлопот!</p>
         `,
-        imagePath: '/images/hero-2.png',
+        imagePath: '/images/prava.jpeg',
         price: 'от 35 000 ₽',
         benefits: [
           {
@@ -1389,7 +1389,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем официальное оформление прав категории А в кратчайшие сроки, с внесением в базу ГИБДД. Все права проходят проверку в государственных системах.</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/a1.webp',
       price: 'от 20 000 ₽',
       benefits: [
         {
@@ -1468,7 +1468,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем официальное оформление прав категории B в кратчайшие сроки, с внесением в базу ГИБДД. Получите права быстро и без лишних хлопот!</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/b1.jpeg',
       price: 'от 22 000 ₽',
       benefits: [
         {
@@ -1547,7 +1547,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем официальное оформление прав категории С в кратчайшие сроки, с внесением в базу ГИБДД. Получите права категории С для профессиональной деятельности!</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/c1.webp',
       price: 'от 25 000 ₽',
       benefits: [
         {
@@ -1626,7 +1626,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем официальное оформление прав категории D в кратчайшие сроки, с внесением в базу ГИБДД. Все права проходят проверку в государственных системах.</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/d1.png',
       price: 'от 27 000 ₽',
       benefits: [
         {
@@ -1705,7 +1705,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем официальное оформление прав категории E в кратчайшие сроки, с внесением в базу ГИБДД. Получите права для профессиональной деятельности быстро и без хлопот!</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/e1.webp',
       price: 'от 26 000 ₽',
       benefits: [
         {
@@ -1784,7 +1784,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем официальное оформление прав категории M в кратчайшие сроки, с внесением в базу ГИБДД. Получите права легко и быстро!</p>
       `,
-      imagePath: '/images/hero-2.png',
+      imagePath: '/images/m1.webp',
       price: 'от 18 000 ₽',
       benefits: [
         {
