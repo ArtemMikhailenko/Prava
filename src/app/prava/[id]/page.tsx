@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: { id: any } }): Pro
   };
 }
 
-export default function CategoryPage({ params }: { params: { id: string } }) {
+export default function CategoryPage({ params }: { params: { id: any } }) {
   const categoryData = getCategoryData(params.id);
   
   // Если категория не найдена, отдаем 404
