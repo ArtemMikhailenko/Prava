@@ -3,14 +3,28 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { CategoryTemplate } from '@/components/CategoryTemplate/CategoryTemplate'
 import { getCategoryData } from '@/data/categories'
-import { JSX } from 'react'
 
-type Props = {
-  params: { id: string }
+// Page component with explicit types
+export default function CategoryPage({ 
+  params 
+}: { 
+  params: { id: string } 
+}) {
+  const categoryData = getCategoryData(params.id)
+
+  if (!categoryData) {
+    notFound()
+  }
+
+  return <CategoryTemplate data={categoryData} />
 }
 
-// Metadata generator function
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+// Metadata function with explicit types
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: { id: string } 
+}): Promise<Metadata> {
   const categoryData = getCategoryData(params.id)
 
   if (!categoryData) {
@@ -24,15 +38,4 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: categoryData.title,
     description: categoryData.subtitle,
   }
-}
-
-// Page component
-export default async function CategoryPage({ params }: Props): Promise<JSX.Element> {
-  const categoryData = getCategoryData(params.id)
-
-  if (!categoryData) {
-    notFound()
-  }
-
-  return <CategoryTemplate data={categoryData} />
 }
