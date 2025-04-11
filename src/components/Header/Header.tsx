@@ -154,16 +154,19 @@ export const Header = () => {
           
           {/* Contact Information */}
           <div className={styles.contactInfo}>
-            <Link href="https://wa.me/your-number" className={styles.whatsappLink}>
+          <Link href="https://wa.me/79002781851" className={styles.whatsappLink}>
               <div className={styles.whatsappContainer}>
                 <span>Пишите нам в WhatsApp</span>
               </div>
             </Link>
-            <button 
+            <a
+              href="https://t.me/Aleksandr24th"
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.callbackButton}
             >
-              <span>Обратный звонок</span>
-            </button>
+              <span>Связаться</span>
+            </a>
           </div>
           
           {/* Mobile Menu Button */}
@@ -190,17 +193,22 @@ export const Header = () => {
                 onMouseEnter={() => item.hasSubmenu && setHoveredSubmenu(item.id)}
                 onMouseLeave={() => item.hasSubmenu && setHoveredSubmenu(null)}
               >
-                <Link 
-                  href={item.path} 
-                  className={activeNavItem === item.id ? styles.activeLink : ''}
-                >
-                  {item.label}
-                  {item.hasSubmenu && (
-                    <svg className={styles.dropdownArrow} width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                {item.hasSubmenu ? (
+                    <>
+                      {/* Для пунктов с подменю — просто span */}
+                      <span className={styles.navLabel}>
+                        {item.label}
+                        <svg className={styles.dropdownArrow} width="10" height="6" /* ... */>
+                          <path d="M1 1L5 5L9 1" /* ... *//>
+                        </svg>
+                      </span>
+                    </>
+                  ) : (
+                    /* Для пунктов без подменю — Link */
+                    <Link href={item.path} className={styles.navLink}>
+                      {item.label}
+                    </Link>
                   )}
-                </Link>
                 {activeNavItem === item.id && <div className={styles.activeIndicator} />}
                 
                 {/* Dropdown Submenu */}
@@ -217,9 +225,6 @@ export const Header = () => {
                             setIsMenuOpen(false);
                           }}
                         >
-                          <span className={styles.submenuIcon}>
-                            <MenuIcon type={subItem.icon} />
-                          </span>
                           <span className={styles.submenuItemText}>
                             {subItem.title}
                           </span>

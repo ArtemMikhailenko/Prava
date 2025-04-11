@@ -409,7 +409,7 @@
   align-items: center;
 }
 
-.navItem a {
+.navItem span,.navItem a {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -422,7 +422,7 @@
   position: relative;
 }
 
-.navItem:hover a {
+.navItem:hover span,.navItem:hover a {
   color: #2563eb;
 }
 

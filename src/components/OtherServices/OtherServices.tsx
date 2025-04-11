@@ -164,13 +164,15 @@ export const OtherServices = () => {
                   <div className={styles.expandedContent}>
                     <p className={styles.serviceDescription}>{service.description}</p>
                     <div className={styles.serviceActions}>
-                      <button className={styles.primaryButton}>
-                        Оформить заявку
-                      </button>
-                      <button className={styles.secondaryButton}>
-                        Получить консультацию
-                      </button>
-                    </div>
+                        <a
+                          href="https://t.me/Aleksandr24th"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.primaryButton}
+                        >
+                          Связаться с нами
+                        </a>
+                      </div>
                   </div>
                 </div>
               </div>

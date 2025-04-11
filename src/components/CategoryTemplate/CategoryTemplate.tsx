@@ -152,19 +152,52 @@ export const CategoryTemplate = ({
               </div>
               
               <div className={styles.headerButtons}>
-                <button className={styles.primaryButton}>
-                  Оставить заявку
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="currentColor"/>
-                  </svg>
-                </button>
-                <a href="https://wa.me/88001112233" className={styles.secondaryButton}>
-                  <svg className={styles.whatsappButtonIcon} viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19.05 4.91C18.1 4.2 16.9 3.85 15.28 3.85H8.73C7.05 3.85 5.82 4.22 4.87 4.95C3.93 5.7 3.45 6.76 3.45 8.14V15.86C3.45 17.23 3.93 18.31 4.87 19.05C5.82 19.78 7.05 20.15 8.73 20.15H15.28C16.93 20.15 18.15 19.78 19.04 19.05C19.96 18.31 20.42 17.23 20.42 15.86V8.14C20.45 6.79 19.98 5.71 19.05 4.91ZM12 15.52C10.07 15.52 8.5 13.94 8.5 12C8.5 10.06 10.07 8.48 12 8.48C13.93 8.48 15.5 10.06 15.5 12C15.5 13.94 13.93 15.52 12 15.52Z" fill="#25D366"/>
-                  </svg>
-                  Написать в WhatsApp
-                </a>
-              </div>
+                  {/* Telegram CTA */}
+                  <a
+                    href="https://t.me/Aleksandr24th"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.primaryButton}
+                  >
+                    Связаться с нами
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </a>
+
+                  {/* WhatsApp CTA */}
+                  <a
+                    href="https://wa.me/79002781851"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.secondaryButton}
+                  >
+                    <svg
+                      className={styles.whatsappButtonIcon}
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.05 4.91C18.1 4.2 16.9 3.85 15.28 3.85H8.73C7.05 3.85 5.82 4.22 4.87 4.95C3.93 5.7 3.45 6.76 3.45 8.14V15.86C3.45 17.23 3.93 18.31 4.87 19.05C5.82 19.78 7.05 20.15 8.73 20.15H15.28C16.93 20.15 18.15 19.78 19.04 19.05C19.96 18.31 20.42 17.23 20.42 15.86V8.14C20.45 6.79 19.98 5.71 19.05 4.91ZM12 15.52C10.07 15.52 8.5 13.94 8.5 12C8.5 10.06 10.07 8.48 12 8.48C13.93 8.48 15.5 10.06 15.5 12C15.5 13.94 13.93 15.52 12 15.52Z"
+                        fill="#25D366"
+                      />
+                    </svg>
+                    Написать в WhatsApp
+                  </a>
+                </div>
+
             </div>
             
             <div className={styles.headerImageContainer}>
