@@ -297,7 +297,7 @@ export default function PaymentDelivery(){
                 href="https://t.me/Aleksandr24th"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.ctaButton}
+                className={styles.contactButton}
               >
                 Связаться в Telegram
                 <svg

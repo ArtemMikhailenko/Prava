@@ -22,7 +22,7 @@ export const Hero = () => {
     {
       title: 'БЫСТРАЯ ДОСТАВКА ПО ВСЕЙ РОССИИ',
       subtitle: 'Получите права в кратчайшие сроки',
-      background: '/images/hero-3.png',
+      background: '/images/hero-3.webp',
     }
   ];
 

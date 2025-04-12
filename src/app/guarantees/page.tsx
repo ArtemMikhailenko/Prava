@@ -41,19 +41,51 @@ export default function Guarantees (){
               и проверенные решения.
             </p>
             <div className={styles.heroCta}>
-              <button className={styles.primaryButton}>
-                Оставить заявку
-                <svg className={styles.buttonIcon} width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="currentColor"/>
-                </svg>
-              </button>
-              <a href="tel:88001112233" className={styles.secondaryButton}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z" fill="currentColor"/>
-                </svg>
-                Связаться с нами
-              </a>
-            </div>
+                {/* Кнопка «Связаться в Telegram» */}
+                <a
+                  href="https://t.me/Aleksandr24th"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.primaryButton}
+                >
+                  Связаться с нами
+                  <svg
+                    className={styles.buttonIcon}
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+
+                {/* Кнопка «Написать в WhatsApp» */}
+                <a
+                  href="https://wa.me/79002781851"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.secondaryButton}
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.05 4.91C18.1 4.2 16.9 3.85 15.28 3.85H8.73C7.05 3.85 5.82 4.22 4.87 4.95C3.93 5.7 3.45 6.76 3.45 8.14V15.86C3.45 17.23 3.93 18.31 4.87 19.05C5.82 19.78 7.05 20.15 8.73 20.15H15.28C16.93 20.15 18.15 19.78 19.04 19.05C19.96 18.31 20.42 17.23 20.42 15.86V8.14C20.45 6.79 19.98 5.71 19.05 4.91ZM12 15.52C10.07 15.52 8.5 13.94 8.5 12C8.5 10.06 10.07 8.48 12 8.48C13.93 8.48 15.5 10.06 15.5 12C15.5 13.94 13.93 15.52 12 15.52Z"
+                      fill="#25D366"
+                    />
+                  </svg>
+                  Написать в WhatsApp
+                </a>
+              </div>
           </div>
         </div>
       </section>
@@ -231,49 +263,107 @@ export default function Guarantees (){
               </p>
               
               <div className={styles.contactMethods}>
-                <a href="tel:88001112233" className={styles.contactMethod}>
-                  <div className={styles.contactIcon}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z" fill="currentColor"/>
-                    </svg>
-                  </div>
-                  <div className={styles.contactInfo}>
-                    <span className={styles.contactLabel}>Телефон</span>
-                    <span className={styles.contactValue}>8 (800) 111-22-33</span>
-                  </div>
-                </a>
-                
-                <a href="https://wa.me/88001112233" className={styles.contactMethod}>
-                  <div className={styles.contactIcon}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M.057 24l1.687-6.163A11.867 11.867 0 0 1 0 11.937C0 5.347 5.347 0 11.937 0c3.188 0 6.176 1.244 8.426 3.498A11.866 11.866 0 0 1 23.86 11.937c0 6.59-5.347 11.937-11.937 11.937-2.004 0-3.98-.5-5.731-1.45L.057 24zm6.503-3.011l.356.213c1.577 1.011 3.384 1.548 5.235 1.548 5.454 0 9.891-4.437 9.891-9.891 0-2.645-1.03-5.127-2.897-6.994a9.808 9.808 0 0 0-6.994-2.897c-5.454 0-9.891 4.436-9.891 9.891 0 1.964.571 3.872 1.657 5.516l.258.388-1.1 4.016 3.485-.79zm14.017-6.22c-.072-.118-.26-.19-.546-.332-.285-.143-1.686-.83-1.944-.926-.26-.094-.45-.142-.641.143-.19.286-.737.926-.9 1.116-.166.19-.325.214-.61.071-.287-.142-1.2-.44-2.284-1.405-.845-.753-1.407-1.673-1.572-1.959-.166-.285-.017-.44.124-.582.128-.128.285-.332.427-.499.143-.166.19-.285.285-.475.095-.19.048-.357-.024-.499-.071-.143-.64-1.545-.88-2.12-.232-.558-.466-.481-.64-.481-.166 0-.356-.024-.546-.024a1.071 1.071 0 0 0-.784.357c-.261.285-.998.976-.998 2.378 0 1.401 1.021 2.755 1.165 2.945.14.19 2.006 3.066 4.863 4.297 2.857 1.23 2.857.821 3.374.772.516-.05 1.665-.68 1.899-1.34.234-.66.234-1.21.166-1.33v.002z" fill="currentColor"/>
-                    </svg>
-                  </div>
-                  <div className={styles.contactInfo}>
-                    <span className={styles.contactLabel}>WhatsApp</span>
-                    <span className={styles.contactValue}>Напишите нам</span>
-                  </div>
-                </a>
-                
-                <div className={styles.contactMethod}>
-                  <div className={styles.contactIcon}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
-                    </svg>
-                  </div>
-                  <div className={styles.contactInfo}>
-                    <span className={styles.contactLabel}>Адрес</span>
-                    <span className={styles.contactValue}>Работаем по всей России</span>
-                  </div>
-                </div>
-              </div>
-              
-              <button className={styles.ctaButton}>
-                Оставить заявку
-                <svg className={styles.buttonIcon} width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="currentColor"/>
-                </svg>
-              </button>
+  {/* Telegram */}
+  <a
+    href="https://t.me/Aleksandr24th"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={styles.contactMethod}
+  >
+    <div className={styles.contactIcon}>
+      {/* Иконка Telegram */}
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12c0 5.52 4.48 10 10 10
+                 s10-4.48 10-10S17.52 2 12 2zm4.14 7.3l-1.4 6.6c-.1.45-.36.56-.73.35l-2.03-1.5
+                 -.98.94c-.1.1-.18.18-.36.18l.13-1.86 3.38-3.06c.15-.13-.03-.2-.23-.07l-4.18 2.62
+                 -1.8-.56c-.39-.12-.4-.39.08-.58l7.05-2.72c.33-.12.62.07.51.57z"
+              fill="currentColor"/>
+      </svg>
+    </div>
+    <div className={styles.contactInfo}>
+      <span className={styles.contactLabel}>Telegram</span>
+      <span className={styles.contactValue}>@Aleksandr24th</span>
+    </div>
+  </a>
+
+  {/* WhatsApp */}
+  <a
+    href="https://wa.me/79002781851"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={styles.contactMethod}
+  >
+    <div className={styles.contactIcon}>
+      {/* Иконка WhatsApp */}
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M.057 24l1.687-6.163A11.867 11.867 0 0 1 0 11.937C0 5.347
+                 5.347 0 11.937 0c3.188 0 6.176 1.244 8.426 3.498A11.866
+                 11.866 0 0 1 23.86 11.937c0 6.59-5.347 11.937-11.937
+                 11.937-2.004 0-3.98-.5-5.731-1.45L.057 24zm6.503-3.011l.356.213
+                 c1.577 1.011 3.384 1.548 5.235 1.548 5.454 0 9.891-4.437
+                 9.891-9.891 0-2.645-1.03-5.127-2.897-6.994a9.808 9.808
+                 0 0 0-6.994-2.897c-5.454 0-9.891 4.436-9.891
+                 9.891 0 1.964.571 3.872 1.657 5.516l.258.388-1.1
+                 4.016 3.485-.79zm14.017-6.22c-.072-.118-.26-.19-.546-.332
+                 -.285-.143-1.686-.83-1.944-.926-.26-.094-.45-.142-.641.143
+                 -.19.286-.737.926-.9 1.116-.166.19-.325.214-.61.071
+                 -.287-.142-1.2-.44-2.284-1.405-.845-.753-1.407-1.673
+                 -1.572-1.959-.166-.285-.017-.44.124-.582.128-.128.285
+                 -.332.427-.499.143-.166.19-.285.285-.475.095-.19.048
+                 -.357-.024-.499-.071-.143-.64-1.545-.88-2.12
+                 -.232-.558-.466-.481-.64-.481-.166 0-.356-.024
+                 -.546-.024a1.071 1.071 0 0 0-.784.357c-.261.285
+                 -.998.976-.998 2.378 0 1.401 1.021 2.755 1.165
+                 2.945.14.19 2.006 3.066 4.863 4.297 2.857
+                 1.23 2.857.821 3.374.772.516-.05 1.665-.68
+                 1.899-1.34.234-.66.234-1.21.166-1.33v.002z"
+              fill="currentColor"/>
+      </svg>
+    </div>
+    <div className={styles.contactInfo}>
+      <span className={styles.contactLabel}>WhatsApp</span>
+      <span className={styles.contactValue}>+7 900 278‑18‑51</span>
+    </div>
+  </a>
+
+  {/* Адрес */}
+  <div className={styles.contactMethod}>
+    <div className={styles.contactIcon}>
+      {/* Иконка адреса */}
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12
+                 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12
+                 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5
+                 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62
+                 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
+              fill="currentColor"/>
+      </svg>
+    </div>
+    <div className={styles.contactInfo}>
+      <span className={styles.contactLabel}>Адрес</span>
+      <span className={styles.contactValue}>Работаем по всей России</span>
+    </div>
+  </div>
+</div>
+
+{/* Кнопка «Связаться в Telegram» */}
+<a
+  href="https://t.me/Aleksandr24th"
+  target="_blank"
+  rel="noopener noreferrer"
+  className={styles.ctaButton}
+>
+  Связаться в Telegram
+  <svg className={styles.buttonIcon} width="20" height="20" viewBox="0 0 24 24" fill="none"
+       xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59
+             18.59L12 20L20 12L12 4Z" fill="currentColor"/>
+  </svg>
+</a>
+
             </div>
           </div>
         </div>
