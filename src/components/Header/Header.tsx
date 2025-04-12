@@ -77,7 +77,7 @@ export const Header = () => {
         setActiveNavItem(segment);
       } else if (segment === 'prava') {
         setActiveNavItem('avtoprava');
-      } else if (['faq', 'guarantees', 'payment'].includes(segment)) {
+      } else if (['faq', 'guarantees', 'payment','rewies'].includes(segment)) {
         setActiveNavItem(segment);
       }
     } else {
@@ -125,7 +125,8 @@ export const Header = () => {
     { id: 'uslugi', label: 'Услуги', path: '/uslugi', hasSubmenu: true },
     { id: 'faq', label: 'Вопросы', path: '/faq', hasSubmenu: false },
     { id: 'guarantees', label: 'Гарантии', path: '/guarantees', hasSubmenu: false },
-    { id: 'payment', label: 'Оплата и доставка', path: '/payment', hasSubmenu: false }
+    { id: 'payment', label: 'Оплата и доставка', path: '/payment', hasSubmenu: false },
+    { id: 'rewies', label: 'Отзывы', path: '/rewies', hasSubmenu: false }
   ];
 
   return (
