@@ -9,7 +9,7 @@ const videoReviews = [
     name: 'Александр П.',
     location: 'Москва',
     thumbnail: '/images/hero-2.png',
-    videoUrl: '/video/video1.mp4',
+    videoUrl: 'https://res.cloudinary.com/db73uxuw6/video/upload/v1744494464/video1_o17fk7.mp4',
     category: 'Категория B',
     date: '15.03.2025',
     text: 'Получил права категории B без лишних хлопот. Все быстро и качественно, буквально за неделю. Документы прошли все проверки, никаких проблем!'
@@ -19,7 +19,7 @@ const videoReviews = [
     name: 'Ирина К.',
     location: 'Санкт-Петербург',
     thumbnail: '/images/hero-2.png',
-    videoUrl: '/video/video2.mp4',
+    videoUrl: 'https://res.cloudinary.com/db73uxuw6/video/upload/v1744493167/video2_xsizcf.mp4',
     category: 'Категория A',
     date: '02.04.2025',
     text: 'Обратилась за оформлением прав категории А. Всё сделали оперативно, через 3 дня права были уже у меня. Очень довольна сервисом и отношением к клиентам!'
@@ -29,7 +29,7 @@ const videoReviews = [
     name: 'Михаил С.',
     location: 'Екатеринбург',
     thumbnail: '/images/hero-2.png',
-    videoUrl: '/video/video3.mp4',
+    videoUrl: 'https://res.cloudinary.com/db73uxuw6/video/upload/v1744493594/video3_vm10gg.mp4',
     category: 'Категория C',
     date: '10.02.2025',
     text: 'Нужны были права категории C срочно. Обратился сюда по совету друга и не пожалел. Сервис на высоте, консультация подробная, а главное - результат отличный!'
@@ -39,7 +39,7 @@ const videoReviews = [
     name: 'Елена В.',
     location: 'Казань',
     thumbnail: '/images/hero-2.png',
-    videoUrl: '/video/video4.mp4',
+    videoUrl: 'https://res.cloudinary.com/db73uxuw6/video/upload/v1744495141/video4_ozlni0.mp4',
     category: 'Права на яхту',
     date: '05.03.2025',
     text: 'Оформила права на управление яхтой. Менеджеры были очень внимательны, объяснили все нюансы. Документы оформили быстро и качественно. Рекомендую всем!'
@@ -49,7 +49,7 @@ const videoReviews = [
     name: 'Елена В.',
     location: 'Казань',
     thumbnail: '/images/hero-2.png',
-    videoUrl: '/video/video5.mp4',
+    videoUrl: 'https://res.cloudinary.com/db73uxuw6/video/upload/v1744493383/video5_fckbh9.mp4',
     category: 'Права на яхту',
     date: '05.03.2025',
     text: 'Оформила права на управление яхтой. Менеджеры были очень внимательны, объяснили все нюансы. Документы оформили быстро и качественно. Рекомендую всем!'
@@ -59,7 +59,7 @@ const videoReviews = [
     name: 'Елена В.',
     location: 'Казань',
     thumbnail: '/images/hero-2.png',
-    videoUrl: '/video/video6.mp4',
+    videoUrl: 'https://res.cloudinary.com/db73uxuw6/video/upload/v1744494201/video6_obpcur.mp4',
     category: 'Права на яхту',
     date: '05.03.2025',
     text: 'Оформила права на управление яхтой. Менеджеры были очень внимательны, объяснили все нюансы. Документы оформили быстро и качественно. Рекомендую всем!'
@@ -69,7 +69,7 @@ const videoReviews = [
     name: 'Елена В.',
     location: 'Казань',
     thumbnail: '/images/hero-2.png',
-    videoUrl: '/video/video7.mp4',
+    videoUrl: 'https://res.cloudinary.com/db73uxuw6/video/upload/v1744494157/video7_a0tlwj.mp4',
     category: 'Права на яхту',
     date: '05.03.2025',
     text: 'Оформила права на управление яхтой. Менеджеры были очень внимательны, объяснили все нюансы. Документы оформили быстро и качественно. Рекомендую всем!'
@@ -79,7 +79,7 @@ const videoReviews = [
     name: 'Елена В.',
     location: 'Казань',
     thumbnail: '/images/hero-2.png',
-    videoUrl: '/video/video8.mp4',
+    videoUrl: 'https://res.cloudinary.com/db73uxuw6/video/upload/v1744493208/video8_yosn6t.mp4',
     category: 'Права на яхту',
     date: '05.03.2025',
     text: 'Оформила права на управление яхтой. Менеджеры были очень внимательны, объяснили все нюансы. Документы оформили быстро и качественно. Рекомендую всем!'
@@ -89,7 +89,7 @@ const videoReviews = [
     name: 'Елена В.',
     location: 'Казань',
     thumbnail: '/images/hero-2.png',
-    videoUrl: '/video/video9.mp4',
+    videoUrl: 'https://res.cloudinary.com/db73uxuw6/video/upload/v1744492719/video9_fdmjsa.mp4',
     category: 'Права на яхту',
     date: '05.03.2025',
     text: 'Оформила права на управление яхтой. Менеджеры были очень внимательны, объяснили все нюансы. Документы оформили быстро и качественно. Рекомендую всем!'
@@ -99,7 +99,7 @@ const videoReviews = [
     name: 'Елена В.',
     location: 'Херсон',
     thumbnail: '/images/hero-2.png',
-    videoUrl: '/video/video10.mp4',
+    videoUrl: 'https://res.cloudinary.com/db73uxuw6/video/upload/v1744493009/video10_fjltxk.mp4',
     category: 'Права на яхту',
     date: '05.03.2025',
     text: 'Оформила права на управление яхтой. Менеджеры были очень внимательны, объяснили все нюансы. Документы оформили быстро и качественно. Рекомендую всем!'
