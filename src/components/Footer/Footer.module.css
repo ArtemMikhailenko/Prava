@@ -81,6 +81,14 @@
   }
   
   .whatsappLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    max-width: 250px;
+    border-radius: 20px;
+    border:#25D366 1px solid;
     text-decoration: none;
   }
   
@@ -215,8 +223,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: 46px;
+    height: 46px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     color: #fff;

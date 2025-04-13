@@ -146,7 +146,7 @@ export const Header = () => {
             >
               <div className={styles.logoText}>
                 <span className={styles.logoTextPrava}>PRAVA</span>
-                <span className={styles.logoTextVod}>VOD</span>
+                <span className={styles.logoTextVod}>24</span>
                 <span className={styles.logoDecoration}></span>
               </div>
               <span className={styles.slogan}>Заказать ВУ по всей России</span>
