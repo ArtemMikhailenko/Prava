@@ -82,6 +82,7 @@ export const Hero = () => {
             key={index}
             className={`${styles.indicator} ${currentSlide === index ? styles.activeIndicator : ''}`}
             onClick={() => setCurrentSlide(index)}
+            aria-label={`Slide ${index + 1}`}
           />
         ))}
       </div>
@@ -162,29 +163,28 @@ export const Hero = () => {
           </div>
           
           <div className={styles.ctaContainer}>
-          <a
-  href="https://t.me/Aleksandr24th"
-  target="_blank"
-  rel="noopener noreferrer"
-  className={styles.primaryCta}
->
-  <span>Связаться с нами</span>
-  <svg
-    className={styles.ctaIcon}
-    viewBox="0 0 24 24"
-    width="18"
-    height="18"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <line x1="5" y1="12" x2="19" y2="12" />
-    <polyline points="12 5 19 12 12 19" />
-  </svg>
-</a>
-
+            <a
+              href="https://t.me/Aleksandr24th"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.primaryCta}
+            >
+              <span>Связаться с нами</span>
+              <svg
+                className={styles.ctaIcon}
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
