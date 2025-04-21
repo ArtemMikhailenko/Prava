@@ -12,12 +12,12 @@ export const Hero = () => {
     {
       title: 'ЗАКАЗАТЬ ВОДИТЕЛЬСКИЕ ПРАВА ПО ВСЕЙ РОССИИ',
       subtitle: 'С внесением в реестр ГИБДД',
-      background: '/images/hero-1.png',
+      background: '/images/hero-1.webp',
     },
     {
       title: 'ОФИЦИАЛЬНЫЕ ДОКУМЕНТЫ',
       subtitle: 'С гарантией и поддержкой на каждом этапе',
-      background: '/images/hero-2.png',
+      background: '/images/hero-2.webp',
     },
     {
       title: 'БЫСТРАЯ ДОСТАВКА ПО ВСЕЙ РОССИИ',

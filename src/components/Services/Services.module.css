@@ -86,9 +86,14 @@
     position: relative;
     height: 200px;
     overflow: hidden;
+    object-fit: fill;
+width: 100%;
   }
   
   .serviceImage {
+    object-fit: fill;
+    width: 100%;
+
     transition: transform 0.5s ease;
   }
   

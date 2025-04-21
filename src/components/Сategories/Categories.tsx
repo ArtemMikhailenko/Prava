@@ -20,7 +20,7 @@ const categoryData = [
     title: 'Права категории B',
     description: 'Легковые автомобили и малотоннажные грузовики',
     icon: 'car',
-    image: '/images/b1.jpeg',
+    image: '/images/b.webp',
     benefits: ['Доставка по всей России', 'Оплата при получении', 'Проверка через сервисы ГИБДД'],
     price: '65 000 ₽',
   },
@@ -29,7 +29,7 @@ const categoryData = [
     title: 'Права категории BE',
     description: 'Легковые автомобили и малотоннажные грузовики с прицепом',
     icon: 'car',
-    image: '/images/b1.jpeg',
+    image: '/images/BE.webp',
     benefits: ['Доставка по всей России', 'Оплата при получении', 'Проверка через сервисы ГИБДД'],
     price: '45.000₽ (при открытой В)',
   },
@@ -38,7 +38,7 @@ const categoryData = [
     title: 'Права категории C',
     description: 'Грузовые автомобили свыше 3.5 тонн',
     icon: 'truck',
-    image: '/images/c1.webp',
+    image: '/images/C.webp',
     benefits: ['Все необходимые допуски', 'Возможность трудоустройства', 'Быстрое изготовление'],
     price: '70 000 ₽',
   },
@@ -47,7 +47,7 @@ const categoryData = [
     title: 'Права категории CE',
     description: 'Грузовые автомобили свыше 3.5 тонн,соединенных с прицепом',
     icon: 'truck',
-    image: '/images/c1.webp',
+    image: '/images/CE.webp',
     benefits: ['Все необходимые допуски', 'Возможность трудоустройства', 'Быстрое изготовление'],
     price: '45.000₽ (при открытой С)',
   },
@@ -56,7 +56,7 @@ const categoryData = [
     title: 'Права категории D',
     description: 'Автобусы для перевозки пассажиров',
     icon: 'bus',
-    image: '/images/d1.png',
+    image: '/images/D.webp',
     benefits: ['Комплект необходимых документов', 'Индивидуальный подход', 'Юридическая поддержка'],
     price: '50 000 ₽',
   },
@@ -65,7 +65,7 @@ const categoryData = [
     title: 'Права категории DE',
     description: 'Автобусы с прицепом',
     icon: 'bus',
-    image: '/images/d1.png',
+    image: '/images/DE.webp',
     benefits: ['Комплект необходимых документов', 'Индивидуальный подход', 'Юридическая поддержка'],
     price: '45.000₽ (при открытой D)',
   },
@@ -176,9 +176,9 @@ export const Categories = () => {
         </p>
         
         <div className={styles.tabs}>
-          {categoryData.map((category) => (
+          {categoryData.map((category, idx) => (
             <button
-              key={category.id}
+              key={`${category.id}-${idx}`}
               className={`${styles.tabButton} ${activeTab === category.id ? styles.activeTab : ''}`}
               onClick={() => setActiveTab(category.id === activeTab ? null : category.id)}
             >
@@ -195,7 +195,7 @@ export const Categories = () => {
         <div className={styles.cardsContainer}>
           {categoryData.map((category, index) => (
             <div 
-              key={category.id}
+              key={`${category.id}-${index}`}
               className={`${styles.card} ${isVisible ? styles.fadeIn : ''}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
@@ -204,11 +204,10 @@ export const Categories = () => {
               >
                 <div className={styles.cardImageContainer}>
                   <div className={styles.cardImageOverlay}></div>
-                  <Image 
+                  <img 
                     src={category.image} 
                     alt={category.title}
-                    layout="fill"
-                    objectFit="cover"
+                    height="200" 
                     className={styles.cardImage}
                   />
                   <div className={styles.cardCategory}>

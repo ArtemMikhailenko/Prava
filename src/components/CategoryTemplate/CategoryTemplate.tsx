@@ -202,7 +202,7 @@ export const CategoryTemplate = ({
             
             <div className={styles.headerImageContainer}>
               <div className={styles.imageWrapper}>
-                <Image
+                <img
                   src={data.imagePath}
                   alt={data.title}
                   width={500}

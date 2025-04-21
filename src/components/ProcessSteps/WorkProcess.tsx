@@ -131,11 +131,10 @@ export const WorkProcess = () => {
                 
                 <div className={styles.stepImageContainer}>
                   <div className={styles.imageWrapper}>
-                    <Image
+                    <img
                       src={step.image}
                       alt={step.title}
-                      layout="fill"
-                      objectFit="cover"
+                      height= '200px'
                       className={styles.stepImage}
                     />
                     <div className={styles.imageBadge}>{step.number}</div>

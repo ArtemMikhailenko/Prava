@@ -1468,7 +1468,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем официальное оформление прав категории B в кратчайшие сроки, с внесением в базу ГИБДД. Получите права быстро и без лишних хлопот!</p>
       `,
-      imagePath: '/images/b1.jpeg',
+      imagePath: '/images/B.webp',
       price: '65 000 ₽',
       benefits: [
         {
@@ -1547,7 +1547,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем официальное оформление прав категории С в кратчайшие сроки, с внесением в базу ГИБДД. Получите права категории С для профессиональной деятельности!</p>
       `,
-      imagePath: '/images/c1.webp',
+      imagePath: '/images/C.webp',
       price: '70 000 ₽',
       benefits: [
         {
@@ -1626,7 +1626,7 @@ export const categoriesData = {
         </ul>
         <p>Мы предлагаем официальное оформление прав категории D в кратчайшие сроки, с внесением в базу ГИБДД. Все права проходят проверку в государственных системах.</p>
       `,
-      imagePath: '/images/d1.png',
+      imagePath: '/images/D.webp',
       price: '50 000 ₽',
       benefits: [
         {

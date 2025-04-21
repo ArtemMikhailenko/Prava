@@ -1,34 +1,26 @@
 // src/app/prava/[id]/page.tsx
+
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { CategoryTemplate } from '@/components/CategoryTemplate/CategoryTemplate'
-import { getCategoryData } from '@/data/categories'
+import { getCategoryData, categoriesData } from '@/data/categories'
 
-// Custom interface that matches the error message requirements
 interface PageProps {
+  // Next.js ожидает, что params будет Promise<{ id: string }>
   params: Promise<{ id: string }>
 }
 
-// Page component
-export default async function CategoryPage({ params }: PageProps) {
-  // Resolve the params promise
-  const resolvedParams = await params;
-  const categoryData = getCategoryData(resolvedParams.id)
-
-  if (!categoryData) {
-    notFound()
-  }
-
-  return <CategoryTemplate data={categoryData} />
+// 1) Статические параметры для SSG
+export function generateStaticParams(): { id: string }[] {
+  return Object.keys(categoriesData).map((id) => ({ id }))
 }
 
-// Metadata function - also needs to handle promise params
+// 2) Метаданные — тоже асинхронная функция
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  // Resolve the params promise
-  const resolvedParams = await params;
-  const categoryData = getCategoryData(resolvedParams.id)
+  const { id } = await params
+  const category = getCategoryData(id)
 
-  if (!categoryData) {
+  if (!category) {
     return {
       title: 'Категория не найдена',
       description: 'Запрашиваемая категория водительских прав не найдена',
@@ -36,7 +28,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: categoryData.title,
-    description: categoryData.subtitle,
+    title: category.title,
+    description: category.subtitle,
   }
+}
+
+// 3) Компонент страницы — асинхронный, чтобы получить params
+export default async function CategoryPage({ params }: PageProps) {
+  const { id } = await params
+  const category = getCategoryData(id)
+
+  if (!category) {
+    notFound()
+  }
+
+  return <CategoryTemplate data={category} />
 }

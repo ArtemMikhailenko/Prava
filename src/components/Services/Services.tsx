@@ -10,7 +10,7 @@ const servicesData = [
     id: 'gibdd',
     title: 'Получение прав в ГИБДД',
     description: 'Оформление водительских удостоверений с регистрацией в базе ГИБДД',
-    image: '/images/gibdd.png',
+    image: '/images/gibdd.webp',
     icon: 'car-license',
     benefits: [
       'Официальная регистрация в базе',
@@ -129,17 +129,16 @@ export const Services = () => {
               >
                 <div className={styles.serviceImageContainer}>
                   <div className={styles.serviceImageOverlay}></div>
-                  <Image
+                  <img
                     src={service.image}
                     alt={service.title}
-                    layout="fill"
-                    objectFit="cover"
+                    height='300'
                     className={styles.serviceImage}
                   />
                   
-                  <div className={styles.serviceIcon}>
+                  {/* <div className={styles.serviceIcon}>
                     <ServiceIcon type={service.icon} />
-                  </div>
+                  </div> */}
                 </div>
                 
                 <div className={styles.cardContent}>

@@ -196,7 +196,7 @@ export const InfoSection = () => {
       <div className={`${styles.container} ${isVisible ? styles.visible : ''}`}>
         <div className={styles.imageContainer}>
           <div className={styles.imageWrapper}>
-            <Image
+            <img
               src="/images/prava.jpeg"
               alt="Водительское удостоверение"
               width={500}
