@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     locale: "ru_RU",
     type: "website",
     images: [{
-      url: "/images/og-image.jpg",
+      url: "https://prava-24.online/images/og-image.jpg",
       width: 1200,
       height: 630,
       alt: "PRAVAVOD - Водительские права по всей России",
