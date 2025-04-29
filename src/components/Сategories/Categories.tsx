@@ -20,7 +20,7 @@ const categoryData = [
     title: 'Права категории B',
     description: 'Легковые автомобили и малотоннажные грузовики',
     icon: 'car',
-    image: '/images/b.webp',
+    image: '/images/B.webp',
     benefits: ['Доставка по всей России', 'Оплата при получении', 'Проверка через сервисы ГИБДД'],
     price: '65 000 ₽',
   },
